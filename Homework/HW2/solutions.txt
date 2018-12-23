@@ -1,0 +1,13 @@
+<!-- 
+Priyanka Karki
+CSCI 3308-201
+HW #2
+Solutions TXT 
+-->
+
+Q: What are the things needed for Bootstrap to be loaded?
+A: Things needed for Bootstrap to be loaded are a jquery library, an external CSS sheet, and a client java script engine from a CDN.
+
+
+Q: How does Bootstrap’s Grid system work?
+A: The Grid system works by having various rows that create horizontal groups for the columns, as well as the rows and columns the sytem has containers which has the information. The columns which must add up to 12 max to be a row. Additionally the columns create gutters via padding that is offset in rows for the first and law column. Additionally, there are four classes for the grid system which is specificied by the pixel sizes for phones, tablets, and computers.
