@@ -1,0 +1,3 @@
+Github: https://github.com/priyankarki/CU-CSCI3308-CIPractice
+
+Travis CL: https://travis-ci.com/priyankarki/CU-CSCI3308-CIPractice/builds

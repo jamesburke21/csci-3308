@@ -1,0 +1,36 @@
+<!-- Priyanka Karki
+CSCI 3308-301
+10/17/18
+Lab7
+
+note: I used http://127.0.0.1:8080/hello.html instead of the 8000 port -->
+
+<html>
+	<head>
+	<title>
+		Hello
+	</title>
+		<script src="http://code.jquery.com/jquery-2.2.0.js"></script>
+		<script>
+		$(document).ready(function() {
+			var url =
+			'https://api.forecast.io/forecast/50f0b142006c64da001cb15042c518d0/40.014984,-105.270546'
+			$.ajax({url:url, dataType:"jsonp"}).then(function(data) {
+			console.log(data)
+			$('#results').append("temp: ", data.currently.temperature)
+			$('#results2').append("apparent temp: ", data.currently.apparentTemperature)
+			$('#results3').append("type: ", data.currently.precipType)
+			})
+		})
+		</script>
+	</head>
+	<body>
+	<p>Hello, world.</p>
+	<br />
+	<p>Stat / Value</p>
+	<p id="results"></p>
+	<p id="results2"></p>
+	<p id="results3"></p>	
+	</body>
+</html>
+

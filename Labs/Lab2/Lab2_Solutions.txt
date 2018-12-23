@@ -1,0 +1,50 @@
+Priyanka Karki
+CSCI 3308-201
+Lab #2
+09/12/2018
+
+Part 1: Unix Commands
+------------------------
+
+1a. Command: diff scene1_v1.txt scene1_v2.txt
+1b. The "<" character is for lines that different from the first file (v1), and the ">" is lines from the second file (v2).
+1c. Command: diff -c scene1_v1.txt scene1_v2.txt 
+	The -c option shows you the context for the lines that are different within the two files, it outputs the names of the two files with "***" for the first file then "---" for the second file. Then for line or bits of line that needs changing it specifies with a "!" to show where the lines are different.
+
+2a. Command: grep -n "pigeon" scene1_v1.txt
+2b. Command: diff scene1_v1.txt scene1_v2.txt | grep "<"
+
+3a. Command: cut -d ":" -f 1 scene1_v1.txt
+	- field 1 for before delimiter, 2 for after
+3b. Command: diff scene1_v1.txt scene1_v2.txt | grep "<" | cut -d ":" -f 1 scene1_v1.txt 
+	
+4a. Command: sort scene1_v1.txt | uniq -c
+	- shows the duplicate lines as well as how many times each line is duplicated
+4b. Command: diff scene1_v1.txt scene1_v2.txt | grep "<" | cut -d ":" -f 1 | sort | uniq -c
+	- don't need to include the file name again for cut and sort because it will be inputted from grep
+
+5a.1. Command: sed 's/[a-zA-Z]//g' cryptic.txt 
+	- 'g' just means to do it for the whole file
+5a.2. Command: 's/[0-9]/-/g' cryptic.txt 
+5b. 
+	Command: cat cryptic.txt | grep -f cryptic.txt | sed 's/4/a/g' | sed 's/3/e/g' | sed 's/1/i/g' | sed 's/0/o/g' | sed 's/5/s/g' | sed 's/7/t/g' > cryptic.txt 
+
+	You can combine multiple sed commands without piping by using '-e' and recognizing the pattern of a sed command.
+
+6a. Command: grep -E "\d\-\d" regex_practice_data.txt and grep -E -c "\d\-\d" regex_practice_data.txt to count the number of phone numbers
+	- 770 phone numbers
+6b. Command: grep -E 303-441- -c regex_practice_data.txt
+	- 51 lines of Boulder phone numbers (303-441-...)
+
+7a. Command: awk -F ' ' '$1 ~ /ID_1/ {average = $6 / $2 } END {print average}' pizzaOrders.txt 
+	Command: awk -F ' ' '$1 ~ /ID_2/ {average = $6 / $2 } END {print average}' pizzaOrders.txt
+	Command: awk -F ' ' '$1 ~ /ID_3/ {average = $6 / $2 } END {print average}' pizzaOrders.txt 
+	Command: awk -F ' ' '$1 ~ /ID_4/ {average = $6 / $2 } END {print average}' pizzaOrders.txt 
+	- the averages in order are: 5.6, 5, 5.35, 5.34
+7b. 
+	Command: awk -F ' ' '$1 ~ /ID_/ {total += $2; cheese += $5; percent = cheese/total;} END {print percent*100}' pizzaOrders.txt
+	- 37.5% of all the pizzas were cheese
+
+
+
+

@@ -1,0 +1,65 @@
+	Priyanka Karki
+	CSCI 3308 - 201
+
+Lab #1
+Part 1
+
+	3. Command:
+		unzip "file name", to extract the files
+	4. 	Contents: 
+		emptyFolders, images, little1.zip, little2.zip, textFiles
+
+		Hidden files: .secrets.txt
+
+		Used "ls -a" to see all of the files
+
+	5. 	Largest file: little2.zip
+		Used "ls -lah" to see the sizes and "ls -lS" to sort according to side
+
+	6. Commands used to copy over the files: 
+		'cp "filename" <path to folder file is being coped to>', and "du -sh" to show the bytes in the folder
+		
+		The folder is 276K bytes
+
+	7. Command used to zip the folder: 
+		zip -r tinyData.zip tinyData
+		
+		There folder is 172K bytes
+
+	8. Command used to create a tar folder: 
+		tar -cvzf tinyData.tar tinyData
+		
+		The folder is 172K bytes
+
+	9. Commands used to delete folders: 
+		rm -r tinyData
+		rm -r tinyData.zip
+
+	10. Command used to open the tar file: 
+		tar -zxvf tinyData.tar
+	
+		The command compresses all of the files within tinyData to create a "tar" file of the same name.
+
+	11. There is no difference between the two, both contain aliceinwonderland.txt and fiona.jpg
+
+	12. The path to find "target.txt" from this week's folder is:
+		Lab Materials/emptyFolders/13/target.txt
+
+		Full path on machine: /Users/priyankakarki/Desktop/CSCI3308_201/Lab Materials/emptyFolders/13/target.txt
+
+	13. Commands used for the first and last 5 lines of the file:
+		head -5 grimmsfairytales.txt
+		tail -5 grimmsfairytales.txt
+		
+		Command to create a file:
+		'cat > "MyShortStory"' then "ctr + d" to exit the editing mode
+
+---------------------------------------
+Part 2
+	7. Command to find the number of lines & write to script file:
+		wc -l tmp.txt > getUniqueGID.sh
+		
+		Command used to run the file:
+			chmod u+x getUniqueGID.sh to run the file, 
+			then 'sudo ./getUniqueGID.sh' to run it with the password that it asks for, I did not get the "permission denied" error.
+

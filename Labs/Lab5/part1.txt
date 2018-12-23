@@ -1,0 +1,19 @@
+Priyanka Karki
+CSCI 3308-201
+10/02/18
+Lab 5
+
+Part 1
+--------
+1. Css rule used is the element style, which you would add: "element.style{background: red}", for just the div1 block.
+2. Changing the margins, changes the amount of space around the box (div1), and changing the padding changes the entire box for example when I did "padding: 100px" the box became bigger than it initially was.
+3. To change the background color to yellow: element.style{ background: yellow}
+	If the margin is greater than 100px the <p> element goes outside of the box. Also, if the padding is greater than 100px, <p> is now yellow as well as the element, with both of them being outside of the box.
+	Changes made: element.style{ background: yellow
+								 margin: 200px
+								 padding: 200px}
+4. Changing the overflow allows you to scroll through the page if the content does not properly fit the page margins, there is also the "hidden" option which does not allow scrolling and cuts off the page as it is.
+5. Float left, sorts the boxes from 1,2,3 in left to right order of the page. Float right, aligns all of the boxes to the right side of the page and sorts them from 3,2,1 going from the left to the right.
+6. For div1, after doing float left and clear right, the box goes from the right hand side of the page to the left hand side, while boxes 2 and 3 remain in the right. Similar thing occurs for div2 where box2 is now on the left hand side after box 1, and box 3 is still in the right hand side of the page. Lastly, for div3 after doing float left and clear right, box 3 is now on the left hand side, and all of the boxes are ordered 1,2,3 from left to right.
+7. All of the divs are "float: left", except for div3 which also has the "clear: left" attribute, making it go below box 1.
+8. The margins are now along the sides of the page, this tells you that the default margin (8px) is set up so that there is always some space between the content and the borders of the page.
